@@ -11,7 +11,7 @@ class Student < ActiveRecord::Base
     @student = Student.find_by(id: params[:id])
   end
 
-  def self.activate
+  def activate
     @student = Student.find_by(id: params[:id])
     
     if @student.active == true
