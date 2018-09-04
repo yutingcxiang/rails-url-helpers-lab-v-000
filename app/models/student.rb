@@ -12,6 +12,7 @@ class Student < ActiveRecord::Base
   end
 
   def 
-    @student = Student.find(params[:id])
+    @student = Student.find_by(id: params[:id])
+    redirect
   end
 end
